@@ -1,6 +1,5 @@
-importFrom("grDevices", "colorRampPalette", "rgb")
-importFrom("colorspace", "hex2RGB")
+importFrom("grDevices", "colorRampPalette", "rgb", "col2rgb", "hsv", "rgb2hsv")
 importFrom("stats", "median")
-importFrom("tm", "Corpus", "DocumentTermMatrix")
+importFrom("tm", "Corpus", "DocumentTermMatrix", "VectorSource", "stopwords", "weightTfIdf")
 
 exportPattern("^[[:alpha:]]+")
