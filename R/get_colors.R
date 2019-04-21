@@ -22,7 +22,6 @@ get.color <- function(word){
 #' @param aggregate method of aggregation
 #' @return a color palette of \code{n.colors} elements.
 #' @examples
-#' library(rainbaud)
 #' foo = c("forest", "water", "fire")
 #' pal1 = create.palette(foo)
 #' pal2 = create.palette(foo, n.colors = 11, aggregate = "median")

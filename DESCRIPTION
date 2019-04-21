@@ -7,7 +7,7 @@ Authors@R: c( person("Alessandro", "Casa", email = "casa@stat.unipd.it",
                   role = c("aut", "cre", "clr")),
               person("Tullia", "Padellini", email = "tullia.padellini@uniroma1.it",
                   role = c("aut", "cre", "clr")))
-Maintainer: 
+Maintainer: someone <some@mail.com>
 Description: Creates color palettes from text inputs.
 License: GPL-2
 Imports: rjson, dichromat, colorspace
