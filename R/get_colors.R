@@ -1,4 +1,4 @@
-#' Extracts colors from Picular.co
+#' Parse colors from Picular.co
 #'
 #' @param word a string to be converted into a color.
 #' @return the 20 first colors found on picular.co for \code{word}. See \url{http://picular.co} for more details
@@ -15,7 +15,7 @@ get.color <- function(word){
 }
 
 
-#' Create a palette given a collection of words
+#' Create a palette given a collection of words (or only one word?)
 #'
 #' @param words a vector containing
 #' @param n.colors number of colors of the palette

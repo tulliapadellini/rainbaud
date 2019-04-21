@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_colors.R
 \name{create.palette}
 \alias{create.palette}
-\title{Create a palette given a collection of words}
+\title{Create a palette given a collection of words (or only one word?)}
 \usage{
 create.palette(words, n.colors = length(words),
   aggregate = "most-prominent")
@@ -18,7 +18,7 @@ create.palette(words, n.colors = length(words),
 a color palette of \code{n.colors} elements.
 }
 \description{
-Create a palette given a collection of words
+Create a palette given a collection of words (or only one word?)
 }
 \examples{
 library(rainbaud)

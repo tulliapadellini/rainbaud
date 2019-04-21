@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_colors.R
 \name{get.color}
 \alias{get.color}
-\title{Extracts colors from Picular.co}
+\title{Parse colors from Picular.co}
 \usage{
 get.color(word)
 }
@@ -13,7 +13,7 @@ get.color(word)
 the 20 first colors found on picular.co for \code{word}. See \url{http://picular.co} for more details
 }
 \description{
-Extracts colors from Picular.co
+Parse colors from Picular.co
 }
 \examples{
 get.color("spring")

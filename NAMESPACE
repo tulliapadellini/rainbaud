@@ -2,4 +2,5 @@ importFrom("grDevices", "colorRampPalette", "rgb")
 importFrom("colorspace", "hex2RGB")
 importFrom("stats", "median")
 
+
 exportPattern("^[[:alpha:]]+")
