@@ -42,6 +42,26 @@ create.palette <- function(words, n.colors=length(words), aggregate = "most-prom
   }
 
   return(pal)
+}
 
+#' Extracts the most relevant words from a sentence
+#'
+#' @param sentence a string
+#' @return a vector of strings
+#' @examples
+#' myfairlady = "the rain in Spain stays mainly in the plain"
+#' extract_words(myfairlady)
+extract_words <- function(sentence) {
+  corpus <- Corpus(VectorSource(sentence))
+  dtm <- DocumentTermMatrix(corpus, control = list( stemming = TRUE, remove_stopwords="en",
+                                                    minWordLength = 2, removeNumbers = TRUE,
+                                                    removePunctuation = TRUE, bounds=list(local = c(1,Inf)),
+                                                    weighting = function(x) weightTfIdf(x, normalize = FALSE)))
+  out <- dtm$dimnames$Terms
+  m <- match(out,stopwords("en"))
+  if (any(!is.na(m))) {
+    out <- out[-which(!is.na(m))]
+  }
+  return(out)
 }
 

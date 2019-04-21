@@ -16,9 +16,20 @@ points(seq(1, 4, length.out = 11), rep(0.2,11), col = dd, pch = 20, cex = 4)
 
 
 
+
+
 col1 = get.colors("Alessandro")
 plot(1:22, rep(0, 22), pch = 15, col = col1, cex = 4, axes = F, xlab = "", ylab = "")
 
 
 col2 = get.colors("Tullia")
 points(1:22, rep(-0.2, 22), pch = 15, col = col2, cex = 4)
+
+
+mfl = create.palette(c("main" , "plain" ,"rain" , "spain", "stay"))
+mfl2 = create.palette(c("main" , "plain" ,"rain" , "spain", "stay"), aggregate = "mean")
+mfl3 = create.palette(c("main" , "plain" ,"rain" , "spain", "stay"), aggregate = "median")
+
+plot(1:5, rep(0, 5), pch = 15, col = mfl2, cex = 4, axes = F, xlab = "", ylab = "")
+points(1:5, rep(-0.2, 5), pch = 15, col = mfl3, cex = 4)
+points(1:5, rep(0.2, 5), pch = 15, col = mfl, cex = 4)

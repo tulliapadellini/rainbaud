@@ -10,7 +10,7 @@ Authors@R: c( person("Alessandro", "Casa", email = "casa@stat.unipd.it",
 Maintainer: someone <some@mail.com>
 Description: Creates color palettes from text inputs.
 License: GPL-2
-Imports: rjson, dichromat, colorspace
+Imports: rjson, dichromat, colorspace, tm
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
