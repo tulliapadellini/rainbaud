@@ -8,6 +8,8 @@ get.color(word, sorted = TRUE)
 }
 \arguments{
 \item{word}{a string to be converted into a color.}
+
+\item{sorted}{logical, if \code{TRUE} then colors are sorted according to their hue.}
 }
 \value{
 the 20 first colors found on picular.co for \code{word}. See \url{http://picular.co} for more details
