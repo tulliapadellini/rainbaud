@@ -36,7 +36,7 @@ extract_words <- function(sentence, language = "en", n.topics = 10) {
   dtm <- DocumentTermMatrix(corpus, control = list( stemming = TRUE, stopwords = TRUE, remove_stopwords=language,
                                                     minWordLength = 2, removeNumbers = TRUE,
                                                     removePunctuation = TRUE, bounds=list(local = c(1,Inf)),
-                                                    weighting = function(x) weightTfIdf(x, normalize = FALSE)))
+                                                    weighting = tm::weightTf))
 
   out <- dtm$dimnames$Terms
 
@@ -45,11 +45,8 @@ extract_words <- function(sentence, language = "en", n.topics = 10) {
   lda <- LDA(dtm, k = n.topics, control = list(seed = 1234))
   topics.tibb <- tidy(lda, matrix = "beta")
 
-  top.terms <- topics.tibb %>%
-      group_by(topic) %>%
-      top_n(1, beta)
+  top.terms <- top_n(group_by(topics.tibb, topic),1,beta)
   out = unique(top.terms$term)
-
 
   }
   return(out)
