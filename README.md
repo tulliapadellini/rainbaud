@@ -5,32 +5,42 @@
 
 ### An `R` package for converting text into colors.
 
-Color determination is somewhat of an under-defined problem, for which
-there is no unique solution. For example Kandinski associates
+Color theory has been a largely explored field of research, in which the
+relationship between color and other forms of perception stands as an
+under-defined and still unsolved problem. Many have been addressing the
+issue of associating colors to other domains of perception. For example
+Kandinsky (1911) relates colors to moods, while Ramachandran and Hubard
+investigate the connection between sounds and color in brain attivation
+patterns (Chromesthesia).
 
-We built on the framework introduced by the work of Rimbaud (), who
+We built on the framework introduced by the work of Rimbaud (1871), who
 proposes to link colors to text, by associating each vowel to a
 chromatic shade:
 
-> A black, E white, I red, U green, O blue: vowels, I shall tell, one
-> day, of your mysterious origins: A, black velvety jacket of brilliant
-> flies which buzz around cruel smells,
+> **Vowels** - *Arthur Rimbaud* (1871)
 > 
-> Gulfs of shadow; E, whiteness of vapours and of tents, lances of proud
-> glaciers, white kings, shivers of cow-parsley; I, purples, spat blood,
-> smile of beautiful lips in anger or in the raptures of penitence;
+> A black, E white, I red, U green, O blue: vowels,  
+> I shall tell, one day, of your mysterious origins:  
+> A, black velvety jacket of brilliant flies  
+> which buzz around cruel smells,
 > 
-> U, waves, divine shudderings of viridian seas, the peace of pastures
-> dotted with animals, the peace of the furrows which alchemy prints on
-> broad studious foreheads;
+> Gulfs of shadow; E, whiteness of vapours and of tents,  
+> lances of proud glaciers, white kings, shivers of cow-parsley;  
+> I, purples, spat blood, smile of beautiful lips  
+> in anger or in the raptures of penitence;  
 > 
-> O, sublime Trumpet full of strange piercing sounds, silences crossed
-> by \[Worlds and by Angels\]: –O the Omega\! the violet ray of \[His\]
-> Eyes\!
+> U, waves, divine shudderings of viridian seas,  
+> the peace of pastures dotted with animals, the peace of the furrows  
+> which alchemy prints on broad studious foreheads;  
+> 
+> O, sublime Trumpet full of strange piercing sounds,  
+> silences crossed by \[Worlds and by Angels\]:  
+> –O the Omega\! the violet ray of \[His\] Eyes\!
 
 The core of our work is to extend such idea by considering words as a
 whole, rather than just the letters they are composed of. To this aim,
-we expoit the
+we expoit [Picular](https:\\picular.co), which allows to retrieve the
+most prominent colors in Google Images searches for any text query.
 
 ## The Practice
 
