@@ -1,13 +1,13 @@
 Package: rainbaud
 Type: Package
 Title: Color Palettes from Texts
-Version: 1.0
+Version: 1.0.0
 Author: Alessandro Casa, Tullia Padellini
 Authors@R: c( person("Alessandro", "Casa", email = "casa@stat.unipd.it",
                   role = c("aut", "cre", "clr")),
               person("Tullia", "Padellini", email = "tullia.padellini@uniroma1.it",
                   role = c("aut", "cre", "clr")))
-Maintainer: someone <some@mail.com>
+Maintainer: Tullia Padellini <tullia.padellini@uniroma1.it>
 Description: Creates color palettes from text inputs.
 License: GPL-2
 Imports: rjson, dichromat, tm

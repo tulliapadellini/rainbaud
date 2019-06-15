@@ -1,11 +1,13 @@
 #' Parse colors from Picular.co
 #'
-#' @param word a string to be converted into a color.
+#' @param colors a string to be converted into a color.
+#' @param aggregate
 #' @return the 20 first colors found on picular.co for \code{word}. See \url{http://picular.co} for more details
 #' @examples
 #' get.color("spring")
 #' get.color("fire")
 #' @seealso \code{\link{create.palette}}
+#' @export
 aggregate.colors <- function(colors, aggregate = "median"){
 
   col.conv = sapply(colors, function(x) rgb2hsv(col2rgb(x)))
@@ -28,6 +30,7 @@ aggregate.colors <- function(colors, aggregate = "median"){
 #' get.color("spring")
 #' get.color("fire")
 #' @seealso \code{\link{create.palette}}
+#' @export
 get.color <- function(word, sorted= TRUE){
 
   # parse picular to get color vector
@@ -61,6 +64,7 @@ get.color <- function(word, sorted= TRUE){
 #' plot(1:11, rep(0, 11), pch = 15, col = mfl1, cex = 4, axes = FALSE, xlab = "", ylab = "")
 #' points(1:11, rep(-0.2, 11), pch = 15, col = mfl1, cex = 4)
 #' @seealso \code{\link{get.color}}
+#' @export
 create.palette <- function(sentence, n.colors=length(words), sorted = TRUE, aggregate = "most-prominent"){
 
   if(aggregate == "most-prominent") sorted = FALSE
@@ -95,15 +99,15 @@ create.palette <- function(sentence, n.colors=length(words), sorted = TRUE, aggr
 }
 
 
-extract_words <- function(sentence) {
+extract_words <- function(sentence, language = "en") {
   corpus <- Corpus(VectorSource(sentence))
-  dtm <- DocumentTermMatrix(corpus, control = list( stemming = TRUE, remove_stopwords="en",
+  dtm <- DocumentTermMatrix(corpus, control = list( stemming = TRUE, remove_stopwords=language,
                                                     minWordLength = 2, removeNumbers = TRUE,
                                                     removePunctuation = TRUE, bounds=list(local = c(1,Inf)),
                                                     weighting = function(x) weightTfIdf(x, normalize = FALSE)))
 
   out <- dtm$dimnames$Terms
-  m <- match(out,stopwords("en"))
+  m <- match(out,stopwords(language))
   if (any(!is.na(m))) {
     out <- out[-which(!is.na(m))]
   }
