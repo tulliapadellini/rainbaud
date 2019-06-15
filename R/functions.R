@@ -95,6 +95,9 @@ get.color <- function(word, sorted= TRUE){
 #'           \item \code{mean}: take the mean of all the colors returned by the function \code{\link{get.color}} in the hsv space.
 #'         }
 #' @param language string defining the language of \code{sentence} (defaults to english).
+#' @description If \code{sentence} contains more than 20 words, the text is summarized by means of Latent Dirichelet Allocation.
+#'  When this is the case, the argument \code{n.colors} determines the number of topic to be
+#'  identified in the text and cannot be set to \code{NULL}.
 #' @return a color palette of \code{n.colors} elements.
 #' @examples
 #' mfl = "the rain in spain stays mainly in the plain"

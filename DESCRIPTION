@@ -4,7 +4,7 @@ Title: Color Palettes from Texts
 Version: 1.0.0
 Author: Alessandro Casa, Tullia Padellini
 Authors@R: c( person("Alessandro", "Casa", email = "casa@stat.unipd.it",
-                  role = c("aut", "cre", "clr")),
+                  role = c("aut", "clr")),
               person("Tullia", "Padellini", email = "tullia.padellini@uniroma1.it",
                   role = c("aut", "cre", "clr")))
 Maintainer: Tullia Padellini <tullia.padellini@uniroma1.it>
