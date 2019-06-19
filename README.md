@@ -3,6 +3,9 @@
 
 # Rainbaud
 
+[Alessandro Casa](https://alessandrocasa.github.io) - [Tullia Padellini](https://tulliapadellini.github.io)
+
+
 ### An `R` package for converting text into colors.
 
 Color theory has been a largely explored field of research, in which the
