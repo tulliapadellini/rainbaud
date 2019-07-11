@@ -79,7 +79,7 @@ color-palette from another of Rimbaud’s poems, *The Drunken Boat*. The
 full-text of this poetry is provided in the package, as the data-object
 `drunkenboat`. In the `create.palette` function, the whole poem is
 summarized into `n.colors` words, representing the key topic of the
-composition, by means of Latent Dirichlet Allocation. Each of this word
+composition, by means of Latent Dirichlet Allocation. Each of these words
 is then converted to colors through Picular. As we have seen before,
 however, the Picular call returns 20 colors for each word, hence it is
 necessary to summarize them into one. Here we propose 3 aggregation
